@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ic_tra"
+        android:icon="@drawable/ic_baseline_dashboard_24"
+        android:title="BERANDA" />
+
+    <item
+        android:id="@+id/ic_inf"
+        android:icon="@drawable/ic_baseline_info_24"
+        android:title="INFORMASI"/>
+
+    <item
+        android:id="@+id/ic_abt"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="TENTANG"/>
+
+
+</menu>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "181272495068",
+    "project_id": "trainfcovid-19",
+    "storage_bucket": "trainfcovid-19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:181272495068:android:8ed5bc39365eaa17668519",
+        "android_client_info": {
+          "package_name": "com.example.trainf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "181272495068-nd5pliitrhk8bv70cgm95pfvna0hns92.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWm9j3lyLEQajeB9qXPQKFLi59I3prBbQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "181272495068-nd5pliitrhk8bv70cgm95pfvna0hns92.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
