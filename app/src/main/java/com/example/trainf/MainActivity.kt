@@ -1,7 +1,9 @@
 package com.example.trainf
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -12,6 +14,8 @@ import com.example.trainf.fragments.InfFragment
 import com.example.trainf.fragments.TraFragment
 import com.example.trainf.model.IndonesiaResponse
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.fragment_inf.*
+import kotlinx.android.synthetic.main.fragment_tra.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,11 +31,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+val button = findViewById<Button>(R.id.btnProvince)
+        button.setOnClickListener {
+            val intent = Intent(this, TraFragment::class.java)
+            startActivity(intent)
+        }
+
 //        api
         showIndonesia()
 
+
+
 //        fragment tombol
-        val bottomNavigation: BottomNavigationView = findViewById(R.id.bt_nav)
+        val bottomNavigation: BottomNavigationView = findViewById(R.id.bt_navv)
+
+
+
 
         traFragment = TraFragment()
         supportFragmentManager
@@ -74,7 +90,17 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+
+
+//        btnProvince.setOnClickListener {
+//            Intent(this@MainActivity, ProvinceActivity::class.java).also {
+//                startActivity(it)
+//            }
+//        }
+
     }
+
+
 
     //    api
     private fun showIndonesia() {
@@ -90,19 +116,21 @@ class MainActivity : AppCompatActivity() {
                     val recover = indonesia?.sembuh
                     val death = indonesia?.meninggal
 
-                    findViewById<TextView>(R.id.tvPositive).text = positive
-                    findViewById<TextView>(R.id.tvHospitalized).text = hoszpital
-                    findViewById<TextView>(R.id.tvRecover).text = recover
-                    findViewById<TextView>(R.id.tvDeath).text = death
-
+                    tvPositive.text = positive
+                    tvHospitalized.text = hoszpital
+                    tvRecover.text = recover
+                    tvDeath.text = death
                 }
 
                 override fun onFailure(call: Call<ArrayList<IndonesiaResponse>>, t: Throwable) {
                     Toast.makeText(this@MainActivity, "${t.message}", Toast.LENGTH_SHORT).show()
 
+
                 }
 
+
             })
+
     }
 
 
